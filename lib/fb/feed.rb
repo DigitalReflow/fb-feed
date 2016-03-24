@@ -11,6 +11,7 @@ module FB
       @app_id = app_id
       @app_secret = app_secret
       @facebook_oauth = ::Koala::Facebook::OAuth.new(@app_id, @app_secret)
+      self
     end
 
     def get_feed(name, options={})
