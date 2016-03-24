@@ -4,7 +4,7 @@ require 'singleton'
 
 module FB
   class Feed
-    attr_accessor :app, :app_id, :app_secret, :facebook_oauth
+    attr_accessor :app, :app_id, :app_secret, :facebook_oauth, :access_token
     include Singleton
 
     def app(app_id, app_secret)
@@ -19,7 +19,7 @@ module FB
     end
 
     def access_token
-      facebook_oauth.get_app_access_token
+      @access_token ||= facebook_oauth.get_app_access_token
     end
   end
 end

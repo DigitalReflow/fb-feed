@@ -1,0 +1,4 @@
+v1.0.1
+  - Add caching to FB token retrieval, add specs
+v1.0.0
+  - Add gem scaffolding and setup
